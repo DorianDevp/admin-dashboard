@@ -1,16 +1,22 @@
-import { ChangeDetectorRef, Component, input, OnDestroy } from '@angular/core';
-import { MediaMatcher } from '@angular/cdk/layout';
+import { Component, input } from '@angular/core';
 import { MenuItem } from 'libs/shared-ui/domain/src/index';
-import { CommonModule, NgFor, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
 @Component({
-  selector: 'shared-app-sidebar',
+  selector: 'shared-ui-app-sidebar',
   standalone: true,
-  imports:[RouterModule, CommonModule, MatIconModule],
+  imports:[RouterModule, CommonModule, MatIcon, MatListModule, MatMenuModule],
   templateUrl: './sidebar.component.html',
-  styleUrls: []
+  styleUrls: ['./sidebar.component.scss']
 })
 export class SharedAppSidebarComponent {
-  menuItems = input<MenuItem[]>();
+  menuItems = input<MenuItem[]>([
+    {
+      name: 'test',
+      icon: 'profile'
+    }
+  ]);
 }

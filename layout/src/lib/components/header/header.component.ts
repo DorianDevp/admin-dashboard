@@ -1,8 +1,13 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
-  selector: 'shared-app-header',
+  selector: 'shared-ui-app-header',
+  standalone: true,
+  imports: [MatButtonModule, MatMenuModule, MatIcon],
   templateUrl: './header.component.html',
-  styleUrls: []
+  styleUrl: './header.component.scss'
 })
-export class SharedAppHeaderComponent {}
+export class SharedAppHeaderComponent {} 

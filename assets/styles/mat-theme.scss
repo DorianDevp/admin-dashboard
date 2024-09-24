@@ -1,0 +1,16 @@
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
+$light-theme: mat.define-theme((
+ color: (
+    theme-type: light,
+    primary: mat.$green-palette,
+  ),
+));
+
+html {
+  @include mat.all-component-themes($light-theme);
+}

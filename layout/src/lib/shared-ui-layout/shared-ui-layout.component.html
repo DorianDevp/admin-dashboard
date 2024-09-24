@@ -12,11 +12,7 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="index.html">
                 <!-- Logo icon --><b>
-                    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                    <!-- Dark Logo icon -->
-                    <img src="assets/images/logo-icon.svg" alt="homepage" class="dark-logo">
-                    <!-- Light Logo icon -->
-                    <img src="assets/images/logo-light-icon.svg" alt="homepage" class="light-logo">
+                  <img src="assets/images/logo-icon.svg" alt="homepage" class="dark-logo">
                 </b>
                 <!--End Logo icon -->
                 <!-- Logo text -->
@@ -37,7 +33,7 @@
         <!-- ============================================================== -->
         <!-- app header component - style you can find in header.scss / header.component.ts-->
         <!-- ============================================================== -->
-        <shared-app-header class="d-flex align-items-center ml-auto"></shared-app-header>
+        <shared-ui-app-header class="d-flex align-items-center ml-auto"></shared-ui-app-header>
     </mat-toolbar>
     <!-- ============================================================== -->
     <!-- End Topbar - style you can find in pages.scss -->
@@ -47,7 +43,7 @@
         <!-- Sidebar - style you can find in sidebar.scss -->
         <!-- ============================================================== -->
         <mat-sidenav #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0" [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches"  >
-          <shared-app-sidebar></shared-app-sidebar>
+          <shared-ui-app-sidebar></shared-ui-app-sidebar>
         </mat-sidenav>
         <!-- ============================================================== -->
         <!-- Sidebar - style you can find in sidebar.scss -->
